@@ -11,15 +11,18 @@ repositories {
 
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+//    testImplementation platform('org.junit:junit-bom:5.9.1')
+//    testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    // OpenTelemetry API
-    implementation 'io.opentelemetry:opentelemetry-api:1.10.0'
-    // OpenTelemetry SDK
-    implementation 'io.opentelemetry:opentelemetry-sdk:1.10.0'
+    implementation(platform("io.opentelemetry:opentelemetry-bom:1.32.0"))
+//    implementation("io.opentelemetry:opentelemetry-api")
+//    // OpenTelemetry API
+    implementation 'io.opentelemetry:opentelemetry-api'
+//    // OpenTelemetry SDK
+    implementation 'io.opentelemetry:opentelemetry-sdk'
     // OpenTelemetry Exporter Jaeger
-    implementation 'io.opentelemetry:opentelemetry-exporter-jaeger:1.10.0'
+    implementation 'io.opentelemetry:opentelemetry-exporter-jaeger'
+
 }
 
 
